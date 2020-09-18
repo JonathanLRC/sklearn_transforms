@@ -14,3 +14,17 @@ class DropColumns(BaseEstimator, TransformerMixin):
         data = X.copy()
         # Retornamos um novo dataframe sem as colunas indesejadas
         return data.drop(labels=self.columns, axis='columns')
+
+class ReplaceNaN(BaseEstimator, TransformerMixin):
+    def __init__(self, columns):
+        self.columns = columns
+
+    def fit(self, X, y=None):
+        return self
+    
+    def transform(self, X):
+        # Primero copiamos el dataframe de datos de entrada 'X'
+        data = X.copy()
+        data = data.fillna(data.mean())
+        # Devolvemos un nuevo dataframe de datos sin las columnas no deseadas
+        return data
