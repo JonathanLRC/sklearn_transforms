@@ -1,6 +1,6 @@
-Metadata-Version: 1.0
+Metadata-Version: 2.0
 Name: linalgnorm
-Version: 1.0
+Version: 2.0
 Summary: This is a sample python package for encapsulating custom tranforms from scikit-learn into Watson Machine Learning
 Home-page: https://github.com/vnderlev/sklearn_transforms/
 Author: Vanderlei Munhoz
